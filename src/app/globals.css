@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #050505; /* Deep black */
+  --text-color: #ffffff; /* Crisp white */
+  --neon-green: #39FF14; /* Vibrant neon green */
+  --neon-green-dim: rgba(57, 255, 20, 0.2);
+  --gray-muted: #888888;
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  font-weight: 400; /* Bebas Neue is only 400 */
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--neon-green);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, .button {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--neon-green);
+  border: 2px solid var(--neon-green);
+  padding: 12px 32px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+button:hover, .button:hover {
+  background-color: var(--neon-green);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px var(--neon-green-dim);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* Utilities */
+.text-neon {
+  color: var(--neon-green);
+}
+
+.text-center {
+  text-center: center;
+}
+
+.text-white {
+  color: var(--text-color);
+}
