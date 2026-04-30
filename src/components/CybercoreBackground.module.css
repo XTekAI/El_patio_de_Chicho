@@ -1,0 +1,88 @@
+.scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Glowing horizontal floor line */
+.floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(57, 255, 20, 0.4) 20%,
+    rgba(57, 255, 20, 0.9) 50%,
+    rgba(57, 255, 20, 0.4) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.35), 0 0 50px rgba(57, 255, 20, 0.1);
+}
+
+/* Vertical center glow column */
+.mainColumn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 55%;
+  background: linear-gradient(to top, rgba(57, 255, 20, 0.25), transparent);
+}
+
+.lightStreamContainer {
+  position: absolute;
+  inset: 0;
+}
+
+/* Individual light beams */
+.lightBeam {
+  position: absolute;
+  bottom: 0;
+  height: 160px;
+  will-change: transform, opacity;
+  animation: rise linear infinite, fade linear infinite;
+}
+
+/* Primary: neon green beams (85% of beams) */
+.primary {
+  background: linear-gradient(
+    to top,
+    transparent,
+    rgba(57, 255, 20, 0.15),
+    rgba(57, 255, 20, 0.7),
+    rgba(57, 255, 20, 0.15),
+    transparent
+  );
+  box-shadow: 0 0 5px rgba(57, 255, 20, 0.4);
+}
+
+/* Secondary: white accent beams (15% of beams) */
+.secondary {
+  height: 100px;
+  background: linear-gradient(
+    to top,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+}
+
+@keyframes rise {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(calc(-100vh - 200px)); }
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { opacity: 0; }
+}

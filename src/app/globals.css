@@ -71,6 +71,27 @@ button:hover, .button:hover {
   box-shadow: 0 0 15px var(--neon-green-dim);
 }
 
+.button-solid {
+  display: inline-block;
+  background-color: var(--neon-green);
+  color: var(--bg-color);
+  border: 2px solid var(--neon-green);
+  padding: 12px 32px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.button-solid:hover {
+  background-color: transparent;
+  color: var(--neon-green);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
 .container {
   width: 100%;
   max-width: 1200px;

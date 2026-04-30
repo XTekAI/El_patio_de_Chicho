@@ -1,0 +1,122 @@
+.rules {
+  background-color: var(--bg-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 100px;
+}
+
+.content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: var(--gray-muted);
+  font-size: 1.1rem;
+}
+
+/* Rule list */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 28px 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.015);
+  transition: background 0.25s ease;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Rule 03 (payment) gets a neon highlight treatment */
+.itemHighlight {
+  background: rgba(57, 255, 20, 0.04) !important;
+  border-left: 3px solid var(--neon-green);
+}
+
+.itemHighlight:hover {
+  background: rgba(57, 255, 20, 0.07) !important;
+}
+
+.number {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  line-height: 1;
+  color: rgba(57, 255, 20, 0.35);
+  flex-shrink: 0;
+  width: 44px;
+  padding-top: 2px;
+}
+
+.itemHighlight .number {
+  color: var(--neon-green);
+}
+
+.itemBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.itemTitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  letter-spacing: 0.05em;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.itemHighlight .itemTitle {
+  color: var(--neon-green);
+}
+
+.itemDesc {
+  color: var(--gray-muted);
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+/* Bottom note */
+.note {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.85rem;
+  padding-top: 4px;
+}
+
+@media (max-width: 560px) {
+  .item {
+    padding: 22px 20px;
+    gap: 18px;
+  }
+
+  .number {
+    font-size: 1.7rem;
+    width: 34px;
+  }
+}

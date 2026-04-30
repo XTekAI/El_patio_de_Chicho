@@ -1,0 +1,98 @@
+.dj {
+  background-color: var(--bg-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 80px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  background: rgba(57, 255, 20, 0.04);
+  border: 1px solid rgba(57, 255, 20, 0.25);
+  border-radius: 14px;
+  padding: 52px 56px;
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.description {
+  color: var(--gray-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.callLabel {
+  color: var(--gray-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.callBtn {
+  white-space: nowrap;
+  font-size: 1.3rem !important;
+  padding: 14px 36px !important;
+}
+
+.phone {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--neon-green);
+  transition: opacity 0.2s ease;
+}
+
+.phone:hover {
+  opacity: 0.8;
+  color: var(--neon-green);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 28px;
+    gap: 32px;
+  }
+
+  .cta {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .callBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

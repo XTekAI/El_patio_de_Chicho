@@ -1,0 +1,191 @@
+.pricing {
+  background-color: var(--bg-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 100px;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: var(--gray-muted);
+  font-size: 1.2rem;
+}
+
+/* Schedule banner */
+.scheduleCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(57, 255, 20, 0.04);
+  border: 1px solid rgba(57, 255, 20, 0.2);
+  border-radius: 10px;
+  padding: 24px 32px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.scheduleLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scheduleLabel {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--text-color);
+}
+
+.scheduleDesc {
+  color: var(--gray-muted);
+  font-size: 1rem;
+}
+
+.scheduleTag {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--neon-green);
+  background: rgba(57, 255, 20, 0.08);
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  border-radius: 6px;
+  padding: 8px 18px;
+  white-space: nowrap;
+}
+
+/* Pricing cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 40px 36px;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.cardFeatured {
+  border-color: rgba(57, 255, 20, 0.35);
+  background: rgba(57, 255, 20, 0.03);
+}
+
+.cardFeatured:hover {
+  border-color: rgba(57, 255, 20, 0.6);
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #000;
+  background-color: var(--neon-green);
+  border-radius: 4px;
+  padding: 4px 12px;
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.priceAmount {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--neon-green);
+  line-height: 1;
+}
+
+.priceUnit {
+  color: var(--gray-muted);
+  font-size: 1rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.features li {
+  color: var(--gray-muted);
+  font-size: 0.95rem;
+  padding-left: 16px;
+  position: relative;
+}
+
+.features li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.featureHighlight {
+  color: var(--text-color) !important;
+}
+
+.featureHighlight::before {
+  content: '—' !important;
+  color: var(--neon-green) !important;
+}
+
+/* DJ note */
+.djNote {
+  text-align: center;
+  color: var(--gray-muted);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .scheduleCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 24px;
+  }
+}
